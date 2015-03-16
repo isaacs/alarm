@@ -1,6 +1,6 @@
 # alarm
 
-linux alarm clock
+linux command-line alarm clock
 
 # usage
 
@@ -10,11 +10,13 @@ If you want your computer to wake up at 9:00 to play a song, do:
 alarm 9:00
 ```
 
+If you don't have a song "configured" one will be downloaded from the internet.
+
 You could also do:
 
 ```
 $ youtube-dl https://www.youtube.com/watch?v=1cAdJ3Ns1gE -o weatherchannel.mp4
-$ at 9:00 'mplayer weatherchannel.mp4'
+$ at 9:00 'mplayer -vo none weatherchannel.mp4'
 ```
 
 # install
@@ -22,3 +24,7 @@ $ at 9:00 'mplayer weatherchannel.mp4'
 Copy `at` and `alarm` into your $PATH somewhere.
 
 Modify `alarm` to play an audio file of your chosing.
+
+# license
+
+MIT

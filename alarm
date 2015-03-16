@@ -2,4 +2,13 @@
 at "$*"
 amixer set Master unmute
 amixer set Master 100%
-mplayer -vo none $HOME/media/internet/dayvan_cowboy.mp4
+
+FILE=$HOME/media/internet/jamz.mp4
+
+if test -f "$FILE"; then
+    mplayer -vo none "$FILE"
+else
+    mkdir -p `dirname "$FILE"`
+    youtube-dl https://www.youtube.com/watch?v=1cAdJ3Ns1gE -o $FILE
+    mplayer -vo none "$FILE"
+fi
