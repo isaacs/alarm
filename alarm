@@ -1,7 +1,4 @@
 #!/bin/bash
-amixer set Master unmute
-amixer set Master 100%
-
 FILE=$HOME/media/internet/jamz.mp4
 
 if test \! -f "$FILE"; then
@@ -10,4 +7,6 @@ if test \! -f "$FILE"; then
 fi
 
 at "$*"
+amixer set Master unmute
+amixer set Master 100%
 mplayer -vo none "$FILE"
