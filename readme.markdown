@@ -10,6 +10,13 @@ If you want your computer to wake up at 9:00 to play a song, do:
 alarm 9:00
 ```
 
+You could also do:
+
+```
+$ youtube-dl https://www.youtube.com/watch?v=1cAdJ3Ns1gE -o weatherchannel.mp4
+$ at 9:00 'mplayer weatherchannel.mp4'
+```
+
 # install
 
 Copy `at` and `alarm` into your $PATH somewhere.
