@@ -1,0 +1,8 @@
+#!/bin/bash
+duration=$((`date -d "$1" +%s` - `date +%s`))
+if test "$duration" -lt 0; then
+    next=$(date +%s -d $(date -d @$((`date +%s`+60*60*24)) +'%Y-%m-%d')" $1")
+    duration=$(($next - `date +%s`))
+fi
+echo sleep "$duration"
+if test -z "$2"; then exec $2; fi

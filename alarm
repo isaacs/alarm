@@ -1,0 +1,5 @@
+#!/bin/bash
+at "$*"
+amixer set Master unmute
+amixer set Master 100%
+mplayer -vo none $HOME/media/internet/dayvan_cowboy.mp4
