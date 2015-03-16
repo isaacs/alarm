@@ -25,6 +25,12 @@ Copy `at` and `alarm` into your $PATH somewhere.
 
 Modify `alarm` to play an audio file of your chosing.
 
+Also install youtube-dl:
+
+```
+sudo apt-get install youtube-dl
+```
+
 # license
 
 MIT
